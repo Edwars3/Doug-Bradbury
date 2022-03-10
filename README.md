@@ -29,8 +29,8 @@ Getting started:
 System required: Python 3.0
 
 Authors: 
-Aaron Calahorra - cal21028@byui.edu
-Edwars Rodriguez - rod21047@byui.edu 
-Maria Angelica Scarante - nil21003@byui.edu
+* Aaron Calahorra - cal21028@byui.edu
+* Edwars Rodriguez - rod21047@byui.edu 
+* Maria Angelica Scarante - nil21003@byui.edu
 
 
