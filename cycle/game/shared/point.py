@@ -42,6 +42,15 @@ class Point:
             boolean: True if both x and y are equal; false if otherwise.
         """
         return self._x == other.get_x() and self._y == other.get_y()
+    
+    def opposite(self, other) -> bool:
+        if self._x == other.get_x() and self._y == -other.get_y():
+            return True
+        elif self._x == -other.get_x() and self._y == other.get_y():
+            return True
+        else:
+            return False
+
 
     def get_x(self):
         """Gets the horizontal distance.

@@ -41,8 +41,12 @@ class Director:
         """
         snake = cast.get_first_actor("snakes")
         snake2 = cast.get_second_actor("snakes")
-        actions = script.get_actions(group)   
-
         actions = script.get_actions(group)    
         for action in actions:
-            action.execute(cast, script)          
+            action.execute(cast, script) 
+            if not constants.GAME_OVER:
+                snake.grow_tail(1, constants.GREEN)
+                snake2.grow_tail(1, constants.RED)
+        # NUMBER_OF_FRAMES +=1
+        # if NUMBER_OF_FRAMES == 45:
+        #         NUMBER_OF_FRAMES = 0         

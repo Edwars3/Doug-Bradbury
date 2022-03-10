@@ -1,5 +1,5 @@
 import pyray
-import  constants
+import constants
 
 
 class VideoService:
@@ -53,9 +53,11 @@ class VideoService:
         Args:
             actors (list): A list of actors to draw.
         """ 
+        number_of_frames = 0
         for actor in actors:
             self.draw_actor(actor, centered)
-    
+        
+
     def flush_buffer(self):
         """Copies the buffer contents to the screen. This method should be called at the end of
         the game's output phase.
@@ -81,11 +83,15 @@ class VideoService:
 
     def _draw_grid(self):
         """Draws a grid on the screen."""
+        
         for y in range(0, constants.MAX_Y, constants.CELL_SIZE):
             pyray.draw_line(0, y, constants.MAX_X, y, pyray.GRAY)
             
         for x in range(0, constants.MAX_X, constants.CELL_SIZE):
             pyray.draw_line(x, 0, x, constants.MAX_Y, pyray.GRAY)
+
+        
+        
     
     def _get_x_offset(self, text, font_size):
         width = pyray.measure_text(text, font_size)
